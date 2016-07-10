@@ -214,6 +214,10 @@ class movieViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.titleLabel.text = movies[indexPath.row] ["title"] as! String
         cell.overviewLabel.text = movies[indexPath.row] ["overview"] as! String
         cell.releaseDate.text = "Release Date: \(movies[indexPath.row]["release_date"] as! String)"
+        cell.selectionStyle = .Blue
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.yellowColor()
+        cell.selectedBackgroundView = backgroundView
         
         let posterUrlString = baseUrl + (movies [indexPath.row] ["poster_path"] as! String)
         
